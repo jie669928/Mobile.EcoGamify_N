@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_name" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+
+        android:scrollIndicators="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigationbar" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="595dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="374dp"
+                    android:layout_height="876dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#FFF8E1"
+                    app:layout_constraintBottom_toTopOf="@+id/submit_garbage_result"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.428">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="126dp"
+                        android:layout_height="126dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ocean_garbage1" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="130dp"
+                        android:layout_height="141dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView13"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                        app:srcCompat="@drawable/ocean_garbage2" />
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                        app:srcCompat="@drawable/ocean_garbage3" />
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="134dp"
+                        android:layout_height="157dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView15"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+                        app:srcCompat="@drawable/ocean_garbage4" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="134dp"
+                        android:layout_height="142dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+                        app:srcCompat="@drawable/ocean_garbage5" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="141dp"
+                        android:layout_height="143dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+                        app:srcCompat="@drawable/ocean_garbage6" />
+
+                    <Button
+                        android:id="@+id/garbage1_click"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="61dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage1_add"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/gerbage2_amount"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ocean_less_1"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage1_amount" />
+
+                    <Button
+                        android:id="@+id/ocean_less_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="122dp"
+                        android:layout_marginBottom="61dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage1_less"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/gerbage2_amount"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage1_amount" />
+
+                    <TextView
+                        android:id="@+id/gerbage1_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="162dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="59dp"
+                        android:text="@string/garbage1_amount_view"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage1_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/garbage2_click"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="88dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="98dp"
+                        android:background="#8F3131"
+                        android:text="@string/garbage2_add"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage3_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ocean_less_2"
+                        app:layout_constraintTop_toBottomOf="@+id/garbage1_click" />
+
+
+                    <Button
+                        android:id="@+id/ocean_less_2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="122dp"
+                        android:layout_marginBottom="69dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage2_less"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/gerbage3_amount"
+                        app:layout_constraintEnd_toStartOf="@+id/garbage2_click"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage2_amount"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/gerbage2_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="158dp"
+                        android:layout_marginEnd="59dp"
+                        android:text="@string/garbage2_amount_view"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage2_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12" />
+
+                    <Button
+                        android:id="@+id/ocean_less_3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="269dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage3_less"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toBottomOf="@+id/garbage3_click"
+                        app:layout_constraintEnd_toStartOf="@+id/garbage3_click"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/garbage3_click"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="13dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage3_add"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ocean_less_3"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage3_amount" />
+
+                    <TextView
+                        android:id="@+id/gerbage3_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="157dp"
+                        android:layout_marginEnd="59dp"
+                        android:text="@string/garbage3_amount_view"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage3_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView13" />
+
+                    <Button
+                        android:id="@+id/garbage4_click"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="80dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage4_add"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/gerbage5_amount"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ocean_less_4" />
+
+                    <TextView
+                        android:id="@+id/gerbage4_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="154dp"
+                        android:layout_marginEnd="59dp"
+                        android:text="@string/garbage4_amount_view"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage4_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14" />
+
+                    <Button
+                        android:id="@+id/ocean_less_4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="114dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage4_less"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintEnd_toStartOf="@+id/garbage4_click"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage4_amount" />
+
+                    <Button
+                        android:id="@+id/garbage5_click"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="62dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage5_add"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/gerbage6_amount"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ocean_less_5" />
+
+
+                    <Button
+                        android:id="@+id/ocean_less_5"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="114dp"
+                        android:layout_marginBottom="62dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage5_less"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/gerbage6_amount"
+                        app:layout_constraintEnd_toStartOf="@+id/garbage5_click"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage5_amount" />
+
+                    <TextView
+                        android:id="@+id/gerbage5_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="154dp"
+                        android:layout_marginEnd="59dp"
+                        android:text="@string/garbage5_amount_view"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage5_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15" />
+
+                    <Button
+                        android:id="@+id/garbage6_click"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginBottom="60dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage6_add"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ocean_less_6" />
+
+                    <TextView
+                        android:id="@+id/gerbage6_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="@string/garbage6_amount_view"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage6_click"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16" />
+
+                    <Button
+                        android:id="@+id/ocean_less_6"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="111dp"
+                        android:layout_marginBottom="60dp"
+                        android:background="#404B7C"
+                        android:text="@string/garbage6_less"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/garbage6_click"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toBottomOf="@+id/gerbage6_amount" />
+
+                    <TextView
+                        android:id="@+id/garbage1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/garbage1"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintEnd_toStartOf="@+id/ocean_less_1"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/garbage2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:text="@string/garbage2"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage3_name"
+                        app:layout_constraintEnd_toStartOf="@+id/ocean_less_2"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
+                        app:layout_constraintTop_toBottomOf="@+id/garbage1_name" />
+
+                    <TextView
+                        android:id="@+id/garbage3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginBottom="90dp"
+                        android:text="@string/garbage3"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage4_name"
+                        app:layout_constraintEnd_toStartOf="@+id/ocean_less_3"
+                        app:layout_constraintStart_toEndOf="@+id/imageView13" />
+
+                    <TextView
+                        android:id="@+id/garbage4_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="110dp"
+                        android:text="@string/garbage4"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage5_name"
+                        app:layout_constraintEnd_toStartOf="@+id/ocean_less_4"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14" />
+
+                    <TextView
+                        android:id="@+id/garbage5_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="90dp"
+                        android:text="@string/garbage5"
+                        android:textSize="@dimen/name_size"
+                        app:layout_constraintBottom_toTopOf="@+id/garbage6_name"
+                        app:layout_constraintEnd_toStartOf="@+id/ocean_less_5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15" />
+
+                    <TextView
+                        android:id="@+id/garbage6_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="70dp"
+                        android:text="@string/garbage6"
+                        android:textSize="@dimen/name_size1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ocean_less_6"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/submit_garbage_result"
+                    android:layout_width="218dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/submit_result"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.549"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/take_a_photo"
+                    android:layout_width="78dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/take_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/ocean_item_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="220dp"
+                    android:text="@string/ocean_item_amount_title"
+                    android:textSize="@dimen/name_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/total_number_item"
+                    android:layout_width="129dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="300dp"
+                    android:text="@string/ocean_total_item_number"
+                    android:textSize="@dimen/name_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.37"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ocean_item_amount" />
+
+                <TextView
+                    android:id="@+id/record_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="300dp"
+                    android:text="@string/time"
+                    android:textSize="@dimen/name_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.483"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/total_number_item" />
+
+                <TextView
+                    android:id="@+id/timerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="270dp"
+                    android:text="@string/time_vies"
+                    android:textSize="@dimen/name_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/record_time" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

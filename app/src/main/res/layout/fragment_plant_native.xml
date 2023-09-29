@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlantNativeFragment">
+
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/constraintLayoutContainer"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        tools:context=".HomeCategoryActivity">-->
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/plant_event01"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:drawableTop="@drawable/plant02_380x157"
+                    android:drawablePadding="6dp"
+                    android:gravity="start|center_vertical"
+                    android:hapticFeedbackEnabled="true"
+                    android:padding="6dp"
+                    android:text="@string/event01_description"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/plant_event02"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/plant_event02"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:drawableTop="@drawable/plant01_380x157"
+                    android:drawablePadding="6dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="6dp"
+                    android:text="@string/event04_description"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/plant_event04"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/plant_event01" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/plant_event03"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:drawableTop="@drawable/plant03_380x157"
+                    android:drawablePadding="6dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="6dp"
+                    android:text="@string/event03_description"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/plant_event04" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/plant_event04"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:drawableTop="@drawable/plant04_380x157"
+                    android:drawablePadding="6dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="6dp"
+                    android:text="@string/event02_description"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/plant_event03"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/plant_event02" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="Search"/>
+
+
+    <item
+        android:id="@+id/education"
+        android:icon="@drawable/education"
+        android:title="Education"/>
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="Home"  />
+
+
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/community"
+        android:title="Communnity" />
+
+
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/user"
+        android:title="Setting" />
+
+
+</menu>

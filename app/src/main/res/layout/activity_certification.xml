@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/done"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5EFEF"
+    tools:context=".CertificationActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="227dp"
+        android:layout_height="202dp"
+        app:layout_constraintBottom_toTopOf="@+id/event_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/jisoo" />
+
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="168dp"
+        android:text="@string/eventname"
+        app:layout_constraintBottom_toTopOf="@+id/grabage_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/grabage_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="@string/total_garbage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_name" />
+
+    <TextView
+        android:id="@+id/usingTime"
+        android:layout_width="61dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="292dp"
+        android:text="@string/timmmme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/use_time"
+        app:layout_constraintTop_toBottomOf="@+id/total_number"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/total_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="338dp"
+        android:text="@string/total_garbage_amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/grabage_result"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/use_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="310dp"
+        android:text="@string/timeeeeeee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grabage_result" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/use_time" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shareDialog"
+        android:layout_width="409dp"
+        android:layout_height="196dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFF8E1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/shareIns"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="100dp"
+            android:contentDescription="@string/ins_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shareGmail"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon1" />
+
+        <ImageButton
+            android:id="@+id/shareGmail"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="100dp"
+            android:contentDescription="@string/gmail_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shareWhatsApp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shareIns"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon2" />
+
+        <ImageButton
+            android:id="@+id/shareWhatsApp"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="100dp"
+            android:contentDescription="@string/whatsApp_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shareFaceBook"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shareGmail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon3" />
+
+        <ImageButton
+            android:id="@+id/shareFaceBook"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="100dp"
+            android:contentDescription="@string/facebook_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shareWhatsApp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon4" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="153dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="100dp"
+            android:text="@string/done_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shareFaceBook"
+            app:layout_constraintStart_toEndOf="@+id/shareGmail"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

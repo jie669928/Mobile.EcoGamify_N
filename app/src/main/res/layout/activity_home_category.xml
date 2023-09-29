@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".HomeCategoryActivity">
+
+
+
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/beach"-->
+    <!--        android:layout_width="350dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/rounded_button_bg"-->
+    <!--        android:drawableLeft="@drawable/beach_144x144"-->
+    <!--        android:drawablePadding="6dp"-->
+    <!--        android:gravity="start|center_vertical"-->
+    <!--        android:hapticFeedbackEnabled="true"-->
+    <!--        android:padding="6dp"-->
+    <!--        android:text="@string/beach_category"-->
+    <!--        android:textColor="#333333"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/plant_native"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView3" />-->
+
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/plant_native"-->
+    <!--        android:layout_width="350dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/rounded_button_bg"-->
+    <!--        android:drawableLeft="@drawable/plant_144x144"-->
+    <!--        android:drawablePadding="6dp"-->
+    <!--        android:gravity="start|center_vertical"-->
+    <!--        android:padding="6dp"-->
+    <!--        android:text="@string/plant_native_category"-->
+    <!--        android:textColor="#333333"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/recycle"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/beach" />-->
+
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/recycle"-->
+    <!--        android:layout_width="350dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/rounded_button_bg"-->
+    <!--        android:drawableLeft="@drawable/recycle_144x144"-->
+    <!--        android:drawablePadding="6dp"-->
+    <!--        android:gravity="start|center_vertical"-->
+    <!--        android:padding="6dp"-->
+    <!--        android:text="@string/recycle_category"-->
+    <!--        android:textColor="#333333"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomNav"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/plant_native" />-->
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomNav"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_name" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:scrollIndicators="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigationbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

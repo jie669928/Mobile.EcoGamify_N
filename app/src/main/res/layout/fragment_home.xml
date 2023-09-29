@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:text="Home fragment" />-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeCategoryActivity">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/beach"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_button_bg"
+            android:drawableLeft="@drawable/beach_144x144"
+            android:drawablePadding="6dp"
+            android:gravity="start|center_vertical"
+            android:hapticFeedbackEnabled="true"
+            android:padding="6dp"
+            android:text="@string/beach_category"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:onClick="onBeachButtonClick"
+            app:layout_constraintBottom_toTopOf="@+id/plant_native"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plant_native"
+            android:layout_width="350dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_button_bg"
+            android:drawableLeft="@drawable/plant_144x144"
+            android:drawablePadding="6dp"
+            android:gravity="start|center_vertical"
+            android:padding="6dp"
+            android:text="@string/plant_native_category"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:onClick="onPlantNativeButtonClick"
+            app:layout_constraintBottom_toTopOf="@+id/recycle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beach" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/recycle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/rounded_button_bg"
+            android:drawableLeft="@drawable/recycle_144x144"
+            android:drawablePadding="6dp"
+            android:gravity="start|center_vertical"
+            android:padding="6dp"
+            android:text="@string/recycle_category"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plant_native" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
