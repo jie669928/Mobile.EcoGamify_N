@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "92674814304",
+    "project_id": "mobileecogamify",
+    "storage_bucket": "mobileecogamify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92674814304:android:3c14597a84e5eaf687ee05",
+        "android_client_info": {
+          "package_name": "com.example.mobileecogamify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYzM4y-6jFXY7nTl_z6P8sLnkeGEk593c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

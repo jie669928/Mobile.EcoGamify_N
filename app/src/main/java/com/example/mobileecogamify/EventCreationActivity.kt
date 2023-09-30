@@ -104,18 +104,18 @@ class EventCreationActivity : AppCompatActivity() {
         calendarView = findViewById(R.id.calendarView)
         editText = findViewById(R.id.challenge_name_input)
         eventTypeRadioGroup = findViewById(R.id.eventTypeRadioGroup)
-        selectedImage = findViewById(R.id.selectedImage) // Add this line to reference your ImageView
-
-        // Set up the image selection launcher
-        imageInputButton = findViewById(R.id.imageInputButton)
-        imageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == RESULT_OK) {
-                val intentData: Intent? = result.data
-                val selectedImageUri = intentData?.data
-                // You can use the selectedImageUri to load and display the image
-                selectedImage.setImageURI(selectedImageUri)
-            }
-        }
+//        selectedImage = findViewById(R.id.selectedImage) // Add this line to reference your ImageView
+//
+//        // Set up the image selection launcher
+//        imageInputButton = findViewById(R.id.imageInputButton)
+//        imageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//            if (result.resultCode == RESULT_OK) {
+//                val intentData: Intent? = result.data
+//                val selectedImageUri = intentData?.data
+//                // You can use the selectedImageUri to load and display the image
+//                selectedImage.setImageURI(selectedImageUri)
+//            }
+//        }
 
         // Set a listener for radio button selection
         eventTypeRadioGroup.setOnCheckedChangeListener { _, checkedId ->

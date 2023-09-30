@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Declare the camera permission -->
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Declare the camera hardware feature (optional) -->
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
-
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Declare the camera hardware feature (optional) -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.MobileEcoGamify"
         tools:targetApi="31">
+        <activity
+            android:name=".FirebaseActivity"
+            android:exported="false" />
         <activity
             android:name=".CertificationActivity"
             android:exported="false" />
@@ -76,23 +77,25 @@
         <activity
             android:name=".HomeCategoryActivity"
             android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".HomeActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
