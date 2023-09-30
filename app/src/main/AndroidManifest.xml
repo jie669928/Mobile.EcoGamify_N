@@ -41,7 +41,7 @@
         <activity
             android:name=".EventCreationActivity"
             android:exported="false"
-            android:parentActivityName=".MyChallengeActivity"
+            android:parentActivityName=".HomeCategoryActivity"
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

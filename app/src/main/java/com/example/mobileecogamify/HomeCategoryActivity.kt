@@ -90,7 +90,7 @@ class HomeCategoryActivity : AppCompatActivity() {
     }
 
     private fun createNewEvent() {
-        val intent = Intent(this, MyChallengeActivity::class.java)
+        val intent = Intent(this, EventCreationActivity::class.java)
         startActivity(intent)
     }
 

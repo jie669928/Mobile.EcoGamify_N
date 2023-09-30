@@ -116,7 +116,7 @@ class EventCreationActivity : AppCompatActivity() {
 
                 // You can navigate to another activity or perform further actions here
                 // For example, navigate to the EventDetailsActivity
-                val intent = Intent(this, MyChallengeActivity::class.java)
+                val intent = Intent(this, HomeCategoryActivity::class.java)
                 intent.putExtra("eventId", eventId)
                 startActivity(intent)
             }

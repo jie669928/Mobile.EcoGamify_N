@@ -13,7 +13,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.firebase.firestore.FirebaseFirestore
 
 class NewChallengeAdapter(
-    private val challengeList: List<ChallengeData>,
+    private var challengeList: List<ChallengeData>,
     private val onDeleteClickListener: (ChallengeData) -> Unit
 ) : RecyclerView.Adapter<NewChallengeAdapter.ViewHolder>() {
 
@@ -81,6 +81,12 @@ class NewChallengeAdapter(
 //        holder.itemView.setOnClickListener {
 //            deleteChallenge(challenge)
 //        }
+    }
+
+
+    fun updateData(newChallengeList: List<ChallengeData>) {
+        challengeList = newChallengeList
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {
