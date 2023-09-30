@@ -8,32 +8,8 @@
     android:background="@color/mainBackground"
     tools:context=".EventCreationActivity">
 
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:layout_marginTop="-5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_name" />
-
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:scrollIndicators="left"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:menu="@menu/navigationbar" />-->
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/challengeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Challenges"
@@ -41,14 +17,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="65dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="380dp"
-        android:layout_height="600dp"
+        android:layout_height="650dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button_bg"
+        app:layout_constraintTop_toBottomOf="@+id/challengeTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -205,6 +182,26 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/description_input" />
 
+<!--                    <ProgressBar-->
+<!--                        android:id="@+id/progress_bar"-->
+<!--                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/selectedImage"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        app:layout_constraintBottom_toTopOf="@+id/imageInputButton"-->
+<!--                        android:layout_marginBottom="16dp" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text_view_show_uploads"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Show Uploads"-->
+<!--                        android:textSize="16sp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/imageInputButton"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent" />-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
