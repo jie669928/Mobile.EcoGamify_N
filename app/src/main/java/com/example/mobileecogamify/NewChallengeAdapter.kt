@@ -14,22 +14,18 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class NewChallengeAdapter(
     private var challengeList: List<ChallengeData>,
-    private val onDeleteClickListener: (ChallengeData) -> Unit
+    private val onDeleteClickListener: (ChallengeData) -> Unit,
+    private val onUpdateClickListener: (ChallengeData) -> Unit
 ) : RecyclerView.Adapter<NewChallengeAdapter.ViewHolder>() {
 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //        val challengeImageView: ImageView = itemView.findViewById(R.id.challengeImageView)
-//        val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
-////        val dateAndTimeTextView: TextView = itemView.findViewById(R.id.dateAndTimeTextView) // Add this line
-//        val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
-//        val eventTypeTextView: TextView = itemView.findViewById(R.id.eventTypeTextView)
-//        val imageView: ImageView = itemView.findViewById(R.id.challengeImageView) // Example: Replace with actual IDs
         val challengeImageView: ImageView = itemView.findViewById(R.id.challengeImageView)
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
         val eventTypeTextView: TextView = itemView.findViewById(R.id.eventTypeTextView)
         val deleteButton: AppCompatButton = itemView.findViewById(R.id.deleteButton)
+        val updateButton: AppCompatButton = itemView.findViewById(R.id.updateButton)
 
         init {
             deleteButton.setOnClickListener {
@@ -37,6 +33,14 @@ class NewChallengeAdapter(
                 if (position != RecyclerView.NO_POSITION) {
                     val challenge = challengeList[position]
                     onDeleteClickListener(challenge)
+                }
+            }
+
+            updateButton.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val challenge = challengeList[position]
+                    onUpdateClickListener(challenge)
                 }
             }
         }

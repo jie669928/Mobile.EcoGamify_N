@@ -18,6 +18,15 @@
         android:theme="@style/Base.Theme.MobileEcoGamify"
         tools:targetApi="31">
         <activity
+            android:name=".EditChallengeActivity"
+            android:exported="false"
+            android:parentActivityName=".NewChallenge"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity" />
+        </activity>
+        <activity
             android:name=".NewChallenge"
             android:exported="false"
             android:parentActivityName=".HomeCategoryActivity"
