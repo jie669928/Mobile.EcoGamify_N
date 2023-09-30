@@ -31,181 +31,141 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ScrollView
-            android:layout_width="409dp"
-            android:layout_height="0dp"
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/timePicker1"
+                     />
+
+                <TimePicker
+                    android:id="@+id/timePicker1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:timePickerMode="clock"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+
+                <EditText
+                    android:id="@+id/challenge_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:hint="Challenge Name"
+                    android:inputType="text"
+                    app:layout_constraintBottom_toTopOf="@+id/description_input"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/timePicker1" />
+
+
+                <EditText
+                    android:id="@+id/description_input"
+                    android:layout_width="230dp"
+                    android:layout_height="63dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:inputType="text"
+                    app:layout_constraintBottom_toTopOf="@+id/eventTypeRadioGroup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/challenge_name" />
+
+                <RadioGroup
+                    android:id="@+id/eventTypeRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_input">
+
+                    <RadioButton
+                        android:id="@+id/radioCleaning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Cleaning up the environment" />
+
+                    <RadioButton
+                        android:id="@+id/radioPlanting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plant native species" />
+
+                    <RadioButton
+                        android:id="@+id/radioReduceReuseRecycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reduce, reuse, repair and recycle" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/imageInputButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="selectImage"
+                    android:text="Select Image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eventTypeRadioGroup"
+                    tools:layout_editor_absoluteY="324dp" />
+
+                <ImageView
+                    android:id="@+id/selectedImage"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/save_event_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageInputButton" />
 
+                <Button
+                    android:id="@+id/save_event_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:onClick="buttonSaveEvent"
+                    android:text="Save Event"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectedImage" />
 
-                    <CalendarView
-                        android:id="@+id/calendarView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        app:layout_constraintBottom_toTopOf="@id/show_date"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.491"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.471" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <EditText
-                        android:id="@+id/show_date"
-                        android:layout_width="230dp"
-                        android:layout_height="63dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="8dp"
-                        android:ems="10"
-                        android:hint="Date Selected"
-                        android:inputType="textPersonName"
-                        app:layout_constraintBottom_toTopOf="@+id/challenge_name"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
-
-                    <EditText
-                        android:id="@+id/challenge_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="8dp"
-                        android:ems="10"
-                        android:hint="Challenge Name"
-                        android:inputType="text"
-                        app:layout_constraintBottom_toTopOf="@+id/time_input"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/show_date" />
-
-                    <EditText
-                        android:id="@+id/time_input"
-                        android:layout_width="230dp"
-                        android:layout_height="63dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="8dp"
-                        android:ems="10"
-                        android:hint="Time"
-                        android:inputType="text"
-                        app:layout_constraintBottom_toTopOf="@+id/eventTypeRadioGroup"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/challenge_name" />
-
-                    <EditText
-                        android:id="@+id/description_input"
-                        android:layout_width="230dp"
-                        android:layout_height="63dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="8dp"
-                        android:ems="10"
-                        android:hint="Description"
-                        android:inputType="text"
-                        app:layout_constraintBottom_toTopOf="@+id/selectedImage"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/eventTypeRadioGroup" />
-
-                    <RadioGroup
-                        android:id="@+id/eventTypeRadioGroup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="8dp"
-                        app:layout_constraintBottom_toTopOf="@+id/description_input"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/time_input"
-                        app:layout_constraintVertical_bias="1.0">
-
-                        <RadioButton
-                            android:id="@+id/radioCleaning"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:text="Cleaning up the environment" />
-
-                        <RadioButton
-                            android:id="@+id/radioPlanting"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Plant native species" />
-
-                        <RadioButton
-                            android:id="@+id/radioReduceReuseRecycle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Reduce, reuse, repair and recycle" />
-                    </RadioGroup>
-
-                    <Button
-                        android:id="@+id/imageInputButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:onClick="selectImage"
-
-                        android:text="Select Image"
-
-                        app:layout_constraintBottom_toTopOf="@+id/save_event_btn"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/selectedImage" />
-
-                    <Button
-                        android:id="@+id/save_event_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:onClick="buttonSaveEvent"
-                        android:text="Save Event"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageInputButton" />
-
-                    <ImageView
-                        android:id="@+id/selectedImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="16dp"
-                        app:layout_constraintBottom_toTopOf="@+id/imageInputButton"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/description_input" />
-
-<!--                    <ProgressBar-->
-<!--                        android:id="@+id/progress_bar"-->
-<!--                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        app:layout_constraintTop_toBottomOf="@id/selectedImage"-->
-<!--                        android:layout_alignParentStart="true"-->
-<!--                        app:layout_constraintBottom_toTopOf="@+id/imageInputButton"-->
-<!--                        android:layout_marginBottom="16dp" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/text_view_show_uploads"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="16dp"-->
-<!--                        android:gravity="center"-->
-<!--                        android:text="Show Uploads"-->
-<!--                        android:textSize="16sp"-->
-<!--                        app:layout_constraintBottom_toBottomOf="@+id/imageInputButton"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent" />-->
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
+<!--            </LinearLayout>-->
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
