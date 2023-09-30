@@ -17,9 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.MobileEcoGamify"
         tools:targetApi="31">
-        <activity
-            android:name=".FirebaseActivity"
-            android:exported="false" />
+
         <activity
             android:name=".CertificationActivity"
             android:exported="false" />
@@ -31,46 +29,112 @@
             android:exported="false" />
         <activity
             android:name=".R2DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".RecycleActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>/>
         <activity
             android:name=".R1DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".RecycleActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>/>
         <activity
             android:name=".RecycleActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeCategoryActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
         <activity
             android:name=".B2DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".BeachActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>/>
         <activity
             android:name=".B1DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".BeachActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>/>
+
         <activity
             android:name=".BeachActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeCategoryActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
+
         <activity
             android:name=".OceanCollectorActivity"
             android:exported="false" />
         <activity
             android:name=".Pn4DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PlantNativeActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
         <activity
             android:name=".Pn3DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PlantNativeActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
         <activity
             android:name=".Pn2DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PlantNativeActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
         <activity
             android:name=".Pn1DetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EventsMainPage"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PlantNativeActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
+
         <activity
             android:name=".EventActivity"
             android:exported="false" />
         <activity
             android:name=".PlantNativeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeCategoryActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity"/>
+        </activity>
         <activity
             android:name=".AccountFragment"
             android:exported="false" />
@@ -92,11 +156,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
 
-        </activity>
     </application>
 
 </manifest>

@@ -28,4 +28,5 @@
     <color name="greenJoinBtnColor">#00bb5a</color>
     <color name="lightGrey">#D8D8D8</color>
     <color name="mainBackground">#88C0C2</color>
+    <color name="appNameColor">#404B7C</color>
 </resources>

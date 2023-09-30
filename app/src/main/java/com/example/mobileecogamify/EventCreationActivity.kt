@@ -79,6 +79,7 @@ package com.example.mobileecogamify
 //}
 import android.content.Intent
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
@@ -86,6 +87,9 @@ import android.widget.*
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import java.util.UUID
 
 class EventCreationActivity : AppCompatActivity() {
 
@@ -96,10 +100,16 @@ class EventCreationActivity : AppCompatActivity() {
     private var stringDateSelected: String? = null
     private lateinit var eventTypeRadioGroup: RadioGroup
     private lateinit var selectedImage: ImageView
+    private val PICK_IMAGE_REQUEST = 1
+    private var selectedImageUri: Uri? = null
+    private val db = FirebaseFirestore.getInstance() // Define the Firestore reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_creation)
+
+        val uploadImageButton = findViewById<Button>(R.id.imageInputButton)
+        val cardImageView = findViewById<ImageView>(R.id.communityImageView)
 
         calendarView = findViewById(R.id.calendarView)
         editText = findViewById(R.id.challenge_name_input)

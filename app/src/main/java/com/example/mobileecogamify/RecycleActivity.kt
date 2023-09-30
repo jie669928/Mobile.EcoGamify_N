@@ -14,41 +14,41 @@ class RecycleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycle)
-        bottomNav = findViewById(R.id.bottomNav)
-
-// Select the "Home" menu item by default
-        bottomNav.selectedItemId = R.id.home
-        bottomNav.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.search -> {
-//                    loadFragment(SearchFragment())
-                    val intent = Intent(this, EventActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.education -> {
-                    loadFragment(EducationFragment())
-                    true
-                }
-                R.id.home -> {
-//                    // Create an Intent to launch the HomeCategoryActivity
-//                    val intent = Intent(this, HomeCategoryActivity::class.java)
+//        bottomNav = findViewById(R.id.bottomNav)
+//
+//// Select the "Home" menu item by default
+//        bottomNav.selectedItemId = R.id.home
+//        bottomNav.setOnItemSelectedListener {
+//            when (it.itemId) {
+//                R.id.search -> {
+////                    loadFragment(SearchFragment())
+//                    val intent = Intent(this, EventActivity::class.java)
 //                    startActivity(intent)
-                    loadFragment(HomeFragment())
-                    true
-                }
-                R.id.community ->{
-                    loadFragment(CommunityFragment())
-                    true
-                }
-                R.id.account ->{
-                    loadFragment(AccountFragment())
-                    true
-                }
-
-                else -> false
-            }
-        }
+//                    true
+//                }
+//                R.id.education -> {
+//                    loadFragment(EducationFragment())
+//                    true
+//                }
+//                R.id.home -> {
+////                    // Create an Intent to launch the HomeCategoryActivity
+////                    val intent = Intent(this, HomeCategoryActivity::class.java)
+////                    startActivity(intent)
+//                    loadFragment(HomeFragment())
+//                    true
+//                }
+//                R.id.community ->{
+//                    loadFragment(CommunityFragment())
+//                    true
+//                }
+//                R.id.account ->{
+//                    loadFragment(AccountFragment())
+//                    true
+//                }
+//
+//                else -> false
+//            }
+//        }
 
         // Add OnClickListener to event buttons
         val event01Button = findViewById<AppCompatButton>(R.id.recycle_event01)
