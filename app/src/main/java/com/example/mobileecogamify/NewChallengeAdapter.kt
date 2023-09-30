@@ -6,15 +6,20 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.firebase.firestore.FirebaseFirestore
 
-class NewChallengeAdapter(private val challengeList: List<ChallengeData>) : RecyclerView.Adapter<NewChallengeAdapter.ViewHolder>() {
+class NewChallengeAdapter(
+    private val challengeList: List<ChallengeData>,
+    private val onDeleteClickListener: (ChallengeData) -> Unit
+) : RecyclerView.Adapter<NewChallengeAdapter.ViewHolder>() {
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        val challengeImageView: ImageView = itemView.findViewById(R.id.challengeImageView)
+        //        val challengeImageView: ImageView = itemView.findViewById(R.id.challengeImageView)
 //        val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
 ////        val dateAndTimeTextView: TextView = itemView.findViewById(R.id.dateAndTimeTextView) // Add this line
 //        val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
@@ -24,8 +29,18 @@ class NewChallengeAdapter(private val challengeList: List<ChallengeData>) : Recy
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
         val eventTypeTextView: TextView = itemView.findViewById(R.id.eventTypeTextView)
-    }
+        val deleteButton: AppCompatButton = itemView.findViewById(R.id.deleteButton)
 
+        init {
+            deleteButton.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val challenge = challengeList[position]
+                    onDeleteClickListener(challenge)
+                }
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflate your item layout and return a ViewHolder

@@ -4,6 +4,7 @@ import android.net.Uri
 import com.google.firebase.Timestamp
 
 data class ChallengeData(
+    val id: String, // Add an 'id' property to your ChallengeData class
     val title: String,
 //    val date: String, // Assuming you store date as Timestamp
     val timeHour: Int,

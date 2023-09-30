@@ -1,4 +1,3 @@
-
 package com.example.mobileecogamify
 
 import androidx.appcompat.app.AppCompatActivity
@@ -8,11 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.Timestamp
 
 class NewChallenge : AppCompatActivity() {
     private val firestore = FirebaseFirestore.getInstance()
     private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: NewChallengeAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_challenge)
@@ -21,11 +21,35 @@ class NewChallenge : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Create an empty adapter initially and set it to the RecyclerView
-        val adapter = NewChallengeAdapter(emptyList()) // Pass an empty list initially
+        val adapter = NewChallengeAdapter(emptyList()) { challenge ->
+            // Handle the delete button click for a specific challenge
+            deleteChallenge(challenge)
+        }
         recyclerView.adapter = adapter
 
         // Retrieve data from Firestore
         retrieveChallenges()
+    }
+
+    private fun deleteChallenge(challenge: ChallengeData) {
+        val challengesCollection = firestore.collection("events")
+
+        // Use Firestore's delete method to delete the document by its ID
+        challengesCollection.document(challenge.id)
+            .delete()
+            .addOnSuccessListener {
+                // Challenge deleted successfully
+                // You can also update your local challengeList and notify the adapter
+                Toast.makeText(this, "Challenge deleted successfully.", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { exception ->
+                // Handle delete failure and show an error message to the user
+                Toast.makeText(
+                    this,
+                    "Error deleting challenge: ${exception.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
     }
 
     private fun retrieveChallenges() {
@@ -37,7 +61,7 @@ class NewChallenge : AppCompatActivity() {
                     val challengeList = mutableListOf<ChallengeData>()
                     for (document in querySnapshot.documents) {
                         val title = document.getString("title") ?: ""
-//                        val date = document.getString("date") ?: ""
+                        val id = document.id // Get the document ID
                         val timeHour = document.getLong("timeHour")?.toInt() ?: 0
                         val timeMinute = document.getLong("timeMinute")?.toInt() ?: 0
                         val description = document.getString("description") ?: ""
@@ -45,8 +69,8 @@ class NewChallenge : AppCompatActivity() {
                         val imageUrl = document.getString("imageUrl") ?: ""
 
                         val challenge = ChallengeData(
+                            id, // Pass the document ID
                             title,
-
                             timeHour,
                             timeMinute,
                             description,
@@ -57,8 +81,10 @@ class NewChallenge : AppCompatActivity() {
                         challengeList.add(challenge)
                     }
 
-                    // Initialize and set up the RecyclerView adapter
-                    val adapter = NewChallengeAdapter(challengeList)
+                    val adapter = NewChallengeAdapter(challengeList) { challenge ->
+                        // Handle the delete button click for a specific challenge
+                        deleteChallenge(challenge)
+                    }
                     recyclerView.adapter = adapter
                 } else {
                     // Handle the case where there are no documents in the collection
@@ -77,5 +103,4 @@ class NewChallenge : AppCompatActivity() {
                 Toast.makeText(this, "Error fetching challenges: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
-
 }
