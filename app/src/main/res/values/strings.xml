@@ -146,5 +146,6 @@
     <string name="gmail_content">Share to Gmail\n</string>
     <string name="button">go to account setting\n</string>
     <string name="done_button">Done\n</string>
+    <string name="myownevent">My Own Event</string>
 
 </resources>

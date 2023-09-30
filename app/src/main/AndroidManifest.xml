@@ -17,16 +17,36 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.MobileEcoGamify"
         tools:targetApi="31">
-
+        <activity
+            android:name=".NewChallenge"
+            android:exported="false"
+            android:parentActivityName=".HomeCategoryActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".CertificationActivity"
             android:exported="false" />
         <activity
             android:name=".MyChallengeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeCategoryActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".EventCreationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MyChallengeActivity"
+            android:theme="@style/AppTheme.WithActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".R2DetailsActivity"
             android:exported="false"
@@ -34,8 +54,8 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
-        </activity>/>
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".R1DetailsActivity"
             android:exported="false"
@@ -43,8 +63,8 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
-        </activity>/>
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".RecycleActivity"
             android:exported="false"
@@ -52,7 +72,7 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
         <activity
             android:name=".B2DetailsActivity"
@@ -61,8 +81,8 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
-        </activity>/>
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".B1DetailsActivity"
             android:exported="false"
@@ -70,9 +90,8 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
-        </activity>/>
-
+                android:value=".HomeCategoryActivity" />
+        </activity>
         <activity
             android:name=".BeachActivity"
             android:exported="false"
@@ -80,9 +99,8 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
-
         <activity
             android:name=".OceanCollectorActivity"
             android:exported="false" />
@@ -93,7 +111,7 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
         <activity
             android:name=".Pn3DetailsActivity"
@@ -102,7 +120,7 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
         <activity
             android:name=".Pn2DetailsActivity"
@@ -111,7 +129,7 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
         <activity
             android:name=".Pn1DetailsActivity"
@@ -120,9 +138,8 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
-
         <activity
             android:name=".EventActivity"
             android:exported="false" />
@@ -133,30 +150,28 @@
             android:theme="@style/AppTheme.WithActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeCategoryActivity"/>
+                android:value=".HomeCategoryActivity" />
         </activity>
         <activity
             android:name=".AccountFragment"
             android:exported="false" />
         <activity
             android:name=".HomeCategoryActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".HomeActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".HomeActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

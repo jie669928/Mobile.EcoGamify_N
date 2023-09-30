@@ -68,6 +68,13 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        val ownEvent = rootView.findViewById<View>(R.id.ownEvents)
+        ownEvent.setOnClickListener {
+
+            val intent = Intent(requireActivity(), NewChallenge::class.java)
+            startActivity(intent)
+        }
+
         return rootView
     }
 
