@@ -4,5 +4,6 @@ data class UserProfile(
     val name: String,
     val email: String,
     val gender: String,
-    val imageUrl: String // This property is required to store the image URL
+    val dateOfBirth: String, // Add date of birth field
+    val imageUrl: String
 )

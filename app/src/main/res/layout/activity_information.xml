@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/GreenGlossory"
+        android:layout_width="338dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFF8E1"
+        android:gravity="right|center_vertical"
+        android:text="Green Glossory"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InformationCategoryTitle" />
+
+    <TextView
+        android:id="@+id/SustainablePractices"
+        android:layout_width="338dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFF8E1"
+        android:gravity="right|center_vertical"
+        android:text="Sustainable Practices"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnvironmentChallenges" />
+
+    <ImageView
+        android:id="@+id/SustainablePracticesPhoto"
+        android:layout_width="99dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/sus_prac"
+        app:layout_constraintBottom_toBottomOf="@+id/SustainablePractices"
+        app:layout_constraintStart_toStartOf="@+id/SustainablePractices"
+        app:layout_constraintTop_toTopOf="@+id/SustainablePractices" />
+
+    <TextView
+        android:id="@+id/EnvironmentChallenges"
+        android:layout_width="338dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFF8E1"
+        android:gravity="right|center_vertical"
+        android:text="Environment Challenges"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GreenGlossory" />
+
+    <ImageView
+        android:id="@+id/EnvironmentChallengesPhoto"
+        android:layout_width="99dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/env_cha"
+        app:layout_constraintBottom_toBottomOf="@+id/EnvironmentChallenges"
+        app:layout_constraintStart_toStartOf="@+id/EnvironmentChallenges"
+        app:layout_constraintTop_toTopOf="@+id/EnvironmentChallenges" />
+
+    <TextView
+        android:id="@+id/InformationCategoryTitle"
+        android:layout_width="268dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="66dp"
+        android:background="#FFF8E1"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Information"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/GreenGlossoryPhoto"
+        android:layout_width="99dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/green_glossory"
+        app:layout_constraintBottom_toBottomOf="@+id/GreenGlossory"
+        app:layout_constraintStart_toStartOf="@+id/GreenGlossory"
+        app:layout_constraintTop_toTopOf="@+id/GreenGlossory" />
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="74dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="65dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

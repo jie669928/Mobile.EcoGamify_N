@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/Question1"
+        android:layout_width="358dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFF8E1"
+        android:text=" Question Text 1"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GGContent" />
+
+    <TextView
+        android:id="@+id/GGContent"
+        android:layout_width="268dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="66dp"
+        android:background="#FFF8E1"
+        android:gravity="center"
+        android:text="Quiz"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/Question1RadioGroup"
+        android:layout_width="340dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="136dp"
+        app:layout_constraintStart_toStartOf="@+id/Question1"
+        app:layout_constraintTop_toTopOf="@+id/Question1">
+
+        <RadioButton
+            android:id="@+id/Q1Button1"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Option 1"
+            android:textSize="20sp" />
+
+
+        <RadioButton
+            android:id="@+id/Q1Button2"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Option 2"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/Question1"
+            app:layout_constraintTop_toBottomOf="@+id/Q1Button1" />
+
+        <RadioButton
+            android:id="@+id/Q1Button3"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Option 3"
+            android:textSize="20sp" />
+
+
+        <RadioButton
+            android:id="@+id/Q1Button4"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Option 4"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="140dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:text="Previous"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question1" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="140dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:text="Next"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question1" />
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="74dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="65dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

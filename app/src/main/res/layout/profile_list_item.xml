@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center_vertical|center_horizontal"> <!-- Center vertically and horizontally -->
 
     <ImageView
         android:id="@+id/profileImageView"
@@ -21,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|center_horizontal"> <!-- Center vertically and horizontally -->
 
         <TextView
             android:id="@+id/nameLabel"
@@ -42,7 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical|center_horizontal"> <!-- Center vertically and horizontally -->
 
         <TextView
             android:id="@+id/emailLabel"
@@ -63,7 +66,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical|center_horizontal"> <!-- Center vertically and horizontally -->
 
         <TextView
             android:id="@+id/genderLabel"
@@ -74,6 +78,28 @@
 
         <TextView
             android:id="@+id/genderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gender"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical|center_horizontal"> <!-- Center vertically and horizontally -->
+
+        <TextView
+            android:id="@+id/dateOfBirthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BirthDate:"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dateOfBirthTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="gender"

@@ -16,6 +16,7 @@ class ProfileHistoryAdapter : RecyclerView.Adapter<ProfileHistoryAdapter.Profile
         val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         val emailTextView: TextView = itemView.findViewById(R.id.emailTextView)
         val genderTextView: TextView = itemView.findViewById(R.id.genderTextView)
+        val dateOfBirthTextView: TextView = itemView.findViewById(R.id.dateOfBirthTextView) // Add dateOfBirth field
         val profileImageView: ImageView = itemView.findViewById(R.id.profileImageView)
     }
 
@@ -30,11 +31,11 @@ class ProfileHistoryAdapter : RecyclerView.Adapter<ProfileHistoryAdapter.Profile
         holder.nameTextView.text = profile.name
         holder.emailTextView.text = profile.email
         holder.genderTextView.text = profile.gender
+        holder.dateOfBirthTextView.text = profile.dateOfBirth // Display dateOfBirth
 
         // Use Picasso to load and display the image
         Picasso.get().load(profile.imageUrl).into(holder.profileImageView)
     }
-
 
     override fun getItemCount(): Int {
         return profiles.size
@@ -46,5 +47,3 @@ class ProfileHistoryAdapter : RecyclerView.Adapter<ProfileHistoryAdapter.Profile
         notifyDataSetChanged()
     }
 }
-
-

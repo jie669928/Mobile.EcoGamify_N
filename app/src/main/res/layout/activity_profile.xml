@@ -44,7 +44,23 @@
         android:id="@+id/genderEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Gender"
+        android:hint="Bio"
+        />
+    <!-- Gender Spinner -->
+    <Spinner
+        android:id="@+id/genderSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Date of Birth Button -->
+    <Button
+        android:id="@+id/dateOfBirthButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date of Birth"
+        android:layout_gravity="center"
         />
 
     <Button

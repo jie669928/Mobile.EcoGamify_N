@@ -1,8 +1,10 @@
 package com.example.mobileecogamify
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,7 +13,6 @@ import com.example.mobileecogamify.Post
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-
 
 class PostActivity : AppCompatActivity() {
 
@@ -69,12 +70,19 @@ class PostActivity : AppCompatActivity() {
                     }
 
                     // Initialize the adapter with the retrieved posts
-                    adapter = PostAdapter(posts) { position ->
-                        // Handle post deletion
-                        val post = posts[position]
-                        deletePostFromFirestore(post.postId) // Pass the postId for deletion
-                        deleteImageFromStorage(post.imageUrl)
-                    }
+                    adapter = PostAdapter(posts,
+                        onDeleteClickListener = { position ->
+                            // Handle post deletion
+                            val post = posts[position]
+                            deletePostFromFirestore(post.postId) // Pass the postId for deletion
+                            deleteImageFromStorage(post.imageUrl)
+                        },
+                        onShareClickListener = { position ->
+                            // Handle the share button click
+                            val post = posts[position]
+                            sharePost(post)
+                        })
+
                     recyclerView.layoutManager = LinearLayoutManager(this)
                     recyclerView.adapter = adapter
                 }
@@ -83,8 +91,6 @@ class PostActivity : AppCompatActivity() {
                 }
         }
     }
-
-
 
     private fun deletePostFromFirestore(postId: String) {
         val currentUser = auth.currentUser
@@ -112,8 +118,6 @@ class PostActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-
-
     private fun deleteImageFromStorage(imageUrl: String?) {
         if (imageUrl != null) {
             // Extract the image file name from the imageUrl and delete it from Firebase Storage
@@ -126,6 +130,23 @@ class PostActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     // Handle the failure to delete the image
                 }
+        }
+    }
+
+    private fun sharePost(post: Post) {
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "text/plain"
+        val shareText = "Check out this post:\n${post.content}"
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareText)
+
+        val shareTitle = "Share via"
+        val chooser = Intent.createChooser(shareIntent, shareTitle)
+
+        // Check if the device has apps to handle the intent
+        if (shareIntent.resolveActivity(packageManager) != null) {
+            startActivity(chooser)
+        } else {
+            showToast("No app found to share.")
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.example.mobileecogamify
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -43,8 +43,10 @@ class ProfileHistoryActivity : AppCompatActivity() {
                         val name = documentSnapshot.getString("name") ?: ""
                         val email = documentSnapshot.getString("email") ?: ""
                         val gender = documentSnapshot.getString("gender") ?: ""
-                        val imageUrl = documentSnapshot.getString("imageUrl") ?:""
-                        val profile = UserProfile(name, email, gender, imageUrl)
+                        val dateOfBirth = documentSnapshot.getString("dateOfBirth") ?: ""
+                        val imageUrl = documentSnapshot.getString("imageUrl") ?: ""
+
+                        val profile = UserProfile(name, email, gender, dateOfBirth, imageUrl)
                         profileList.add(profile)
                     }
 

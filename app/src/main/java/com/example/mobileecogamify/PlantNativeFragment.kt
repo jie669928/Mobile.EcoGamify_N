@@ -1,5 +1,6 @@
 package com.example.mobileecogamify
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,6 +27,30 @@ class PlantNativeFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+
+        // Click handler for the Quiz button
+        fun startQuizActivity(view: View) {
+            val intent = Intent(activity, QuizActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Click handler for the Video button
+        fun startVideoActivity(view: View) {
+            val intent = Intent(activity, VideoActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Click handler for the Books button
+        fun startBooksActivity(view: View) {
+            val intent = Intent(activity, BooksActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Click handler for the Categories button
+        fun startInforamtionActivity(view: View) {
+            val intent = Intent(activity, InformationActivity::class.java)
+            startActivity(intent)
         }
     }
 

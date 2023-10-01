@@ -1,11 +1,13 @@
 package com.example.mobileecogamify
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -31,15 +33,52 @@ class EducationFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
+
+    // Define the button click handlers as member functions of the class
+
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_education, container, false)
+
+        val rootView = inflater.inflate(R.layout.fragment_education, container, false)
+
+        val quizButton = rootView.findViewById<View>(R.id.QuizButton)
+        quizButton.setOnClickListener {
+
+            val intent = Intent(requireActivity(), QuizActivity::class.java)
+            startActivity(intent)
+        }
+
+        val videoButton = rootView.findViewById<View>(R.id.VideoButton)
+        videoButton.setOnClickListener {
+
+            val intent = Intent(requireActivity(), VideoActivity::class.java)
+            startActivity(intent)
+        }
+
+        val informationButton = rootView.findViewById<View>(R.id.InformationButton)
+        informationButton.setOnClickListener {
+
+            val intent = Intent(requireActivity(), InformationActivity::class.java)
+            startActivity(intent)
+        }
+
+        val booksButton = rootView.findViewById<View>(R.id.BooksButton)
+        booksButton.setOnClickListener {
+
+            val intent = Intent(requireActivity(), BooksActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+        return rootView
     }
 
 

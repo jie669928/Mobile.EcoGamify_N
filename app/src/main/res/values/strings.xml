@@ -176,4 +176,14 @@
     <string name="historyButton">History\n</string>
     <string name="backToProfiles">byebye</string>
 
+    <string name="bullet_list_text">
+    <![CDATA[
+    <ul>
+        <li>Reduce waste by using products with less packaging and opting for reusable items.</li>
+        <li>Reuse items like containers, bags, and clothing to extend their lifespan.</li>
+        <li>Recycle paper, glass, plastic, and other materials in accordance with local recycling programs.</li>
+    </ul>
+    ]]>
+    </string>
+
 </resources>

@@ -184,6 +184,9 @@ class CommunityFragment : Fragment() {
 
 
 
+
+
+
         // Initialize Firebase Authentication
         mAuth = FirebaseAuth.getInstance()
 
