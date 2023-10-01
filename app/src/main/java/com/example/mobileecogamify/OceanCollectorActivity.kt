@@ -1,5 +1,6 @@
 package com.example.mobileecogamify
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,58 +8,24 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
-import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.content.DialogInterface
+import android.util.Log
+import androidx.appcompat.app.AlertDialog
+import com.google.firebase.firestore.FirebaseFirestore
 
 class OceanCollectorActivity : AppCompatActivity() {
+
     private val garbageTotalAmount = IntArray(6)
     private lateinit var garbageAmountTextViews: List<TextView>
     private lateinit var totalGarbageTextView: TextView
     private lateinit var timerTextView: TextView
     private lateinit var handler: Handler
     private var seconds = 0
-    private lateinit var bottomNav: BottomNavigationView
-
-
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ocean_collector)
-//        bottomNav = findViewById(R.id.bottomNav)
-//
-//        // Select the "Home" menu item by default
-//        bottomNav.selectedItemId = R.id.home
-//        bottomNav.setOnItemSelectedListener {
-//            when (it.itemId) {
-//                R.id.search -> {
-////                    loadFragment(SearchFragment())
-//                    val intent = Intent(this, EventActivity::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.education -> {
-//                    loadFragment(EducationFragment())
-//                    true
-//                }
-//                R.id.home -> {
-////                    // Create an Intent to launch the HomeCategoryActivity
-////                    val intent = Intent(this, HomeCategoryActivity::class.java)
-////                    startActivity(intent)
-//                    loadFragment(HomeFragment())
-//                    true
-//                }
-//                R.id.community ->{
-//                    loadFragment(CommunityFragment())
-//                    true
-//                }
-//                R.id.account ->{
-//                    loadFragment(AccountFragment())
-//                    true
-//                }
-//
-//                else -> false
-//            }
-//        }
 
         initializeViews()
 
@@ -66,13 +33,8 @@ class OceanCollectorActivity : AppCompatActivity() {
         startTimer()
     }
 
-    private  fun loadFragment(fragment: Fragment){
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container,fragment)
-        transaction.commit()
-    }
-
     private fun initializeViews() {
+
         garbageAmountTextViews = listOf(
             findViewById(R.id.gerbage1_amount),
             findViewById(R.id.gerbage2_amount),
@@ -100,6 +62,86 @@ class OceanCollectorActivity : AppCompatActivity() {
 
             increaseButton.setOnClickListener { increaseGarbageTotal(i) }
             decreaseButton.setOnClickListener { decreaseGarbageTotal(i) }
+        }
+
+        // Set click event listener for the "Submit" button
+        val submitButton = findViewById<Button>(R.id.submit_garbage_result)
+        // Call this code after clicking the "Submit" button
+        submitButton.setOnClickListener {
+            // Create an AlertDialog.Builder
+            AlertDialog.Builder(this)
+                .setTitle("Confirm Submission")
+                .setMessage("Are you sure you want to submit the data?")
+                .setPositiveButton("Sure") { dialog, which ->
+                    // Get the total garbage and time
+                    val totalGarbage = totalGarbageTextView.text.toString()
+                    val currentTime = timerTextView.text.toString()
+
+                    // Create a HashMap containing garbage collection data
+                    val data = hashMapOf(
+                        "totalGarbage" to totalGarbage,
+                        "currentTime" to currentTime
+                    )
+
+                    // Upload the data to Firebase Firestore
+                    db.collection("ocean_event_data")
+                        .add(data)
+                        .addOnSuccessListener { documentReference ->
+                            // Data added successfully
+                            Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                            // Handle success
+                        }
+                        .addOnFailureListener { e ->
+                            // Handle failure, log the exception
+                            Log.e(TAG, "Error adding document", e)
+                        }
+
+                    // Create an intent to start the CertificationActivity
+                    val intent = Intent(this, CertificationActivity::class.java)
+                    // Attach data to the intent
+                    intent.putExtra("totalGarbage", totalGarbage)
+                    intent.putExtra("currentTime", currentTime)
+                    // Start the CertificationActivity
+                    startActivity(intent)
+
+                    dialog.dismiss()
+                }
+                .setNegativeButton("Cancel") { dialog, which ->
+                    // Close the dialog without performing submission
+                    dialog.dismiss()
+                }
+                .create()
+                .show()
+        }
+
+
+        // Set click event listener for the "Clear" button
+        val clearButton = findViewById<Button>(R.id.clear_btn)
+        clearButton.setOnClickListener {
+            // Create an AlertDialog.Builder
+            AlertDialog.Builder(this)
+                .setTitle("Confirm Clear")
+                .setMessage("Are you sure you want to clear the data?")
+                .setPositiveButton("Sure") { dialog, which ->
+                    // Perform data clearing operation here, e.g., reset TextView texts
+                    for (i in garbageTotalAmount.indices) {
+                        garbageTotalAmount[i] = 0
+                        updateGarbageDisplay(i)
+                    }
+                    calculateTotalGarbage()
+
+                    // Reset the timer to "00:00:00"
+                    seconds = 0
+                    timerTextView.text = "00:00:00"
+
+                    dialog.dismiss()
+                }
+                .setNegativeButton("Cancel") { dialog, which ->
+                    // Close the dialog without performing data clearing operation
+                    dialog.dismiss()
+                }
+                .create()
+                .show()
         }
 
     }

@@ -99,7 +99,14 @@ class CertificationActivity : AppCompatActivity() {
 
         // Handle Done button click (close dialog)
         doneButton.setOnClickListener {
-            shareDialog.visibility = View.GONE
+            // 创建一个 Intent，用于启动主活动（Main Activity）
+            val intent = Intent(this, HomeCategoryActivity::class.java)
+
+            // 启动主活动
+            startActivity(intent)
+
+            // 关闭当前活动（即当前的活动将被销毁）
+            finish()
         }
     }
 

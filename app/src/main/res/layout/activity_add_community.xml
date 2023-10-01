@@ -1,0 +1,43 @@
+<!-- res/layout/activity_add_community.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E5EFEF">
+
+    <!-- Image Upload Button -->
+    <Button
+        android:id="@+id/uploadImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image" />
+
+    <!-- ImageView to display selected image -->
+    <ImageView
+        android:id="@+id/communityImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <!-- Title EditText -->
+    <EditText
+        android:id="@+id/communityTitleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title" />
+
+    <!-- Description EditText -->
+    <EditText
+        android:id="@+id/communityDescriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveCommunityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Community" />
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5EFEF"
+    tools:context=".Edit_profiles">
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="140dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btnSave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delete_button" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="367dp"
+        android:layout_height="546dp"
+        android:layout_marginBottom="70dp"
+        android:background="#FFF8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/birth_view"
+            android:layout_width="327dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/contact_view"
+            android:layout_width="327dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/birth_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/password_view"
+            android:layout_width="327dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/contact_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/email_view"
+            android:layout_width="327dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/password_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.437"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/name_view"
+            android:layout_width="327dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/email_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/name_icon"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/name_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/profiles_user" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="51dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/email_view"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/profiles_email" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView14"
+            app:layout_constraintStart_toStartOf="@+id/password_view"
+            app:layout_constraintTop_toTopOf="@+id/password_view"
+            app:srcCompat="@drawable/profiles_password" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView15"
+            app:layout_constraintStart_toStartOf="@+id/contact_view"
+            app:layout_constraintTop_toTopOf="@+id/contact_view"
+            app:srcCompat="@drawable/profiles_contact" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="51dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="280dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/birth_view"
+            app:layout_constraintStart_toStartOf="@+id/birth_view"
+            app:layout_constraintTop_toTopOf="@+id/birth_view"
+            app:srcCompat="@android:drawable/ic_menu_today" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="277dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="@string/enter_name"
+            android:inputType="text"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="@+id/name_view"
+            app:layout_constraintEnd_toEndOf="@+id/name_view"
+            app:layout_constraintStart_toEndOf="@+id/name_icon"
+            app:layout_constraintTop_toTopOf="@+id/name_view" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="273dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="@+id/password_view"
+            app:layout_constraintEnd_toEndOf="@+id/password_view"
+            app:layout_constraintStart_toEndOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/password_view" />
+
+        <EditText
+            android:id="@+id/editEmailAddress"
+            android:layout_width="276dp"
+            android:layout_height="49dp"
+            android:ems="10"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="@+id/email_view"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/email_view" />
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="277dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="@string/enter_contact"
+            android:inputType="phone"
+            app:layout_constraintBottom_toBottomOf="@+id/contact_view"
+            app:layout_constraintEnd_toEndOf="@+id/contact_view"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toTopOf="@+id/contact_view" />
+
+        <EditText
+            android:id="@+id/editBirthDate"
+            android:layout_width="277dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="1dp"
+            android:ems="10"
+            android:hint="@string/enter_birth"
+            android:inputType="date"
+            app:layout_constraintBottom_toBottomOf="@+id/birth_view"
+            app:layout_constraintEnd_toEndOf="@+id/birth_view"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toTopOf="@+id/birth_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="140dp"
+        android:layout_height="49dp"
+        android:text="@string/btndelete"
+        app:layout_constraintBottom_toBottomOf="@+id/save_button"
+        app:layout_constraintEnd_toStartOf="@+id/save_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/editProfiles"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/edit_profiles"
+        android:textSize="@dimen/title"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/upBtnProfiles"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="350dp"
+        android:contentDescription="@string/back_profiles"
+        app:layout_constraintBottom_toTopOf="@+id/editProfiles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

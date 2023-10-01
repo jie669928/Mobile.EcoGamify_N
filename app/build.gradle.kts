@@ -82,6 +82,7 @@ dependencies {
     //Progress Dialog Library
     implementation("com.jpardogo.googleprogressbar:library:1.2.0")
 
+    implementation ("com.squareup.picasso:picasso:2.71828")  // Use the latest version available
 //    // Import the Firebase BoM
 //    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
 //

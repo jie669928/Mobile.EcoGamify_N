@@ -6,60 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".OceanCollectorActivity">
 
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_name" />
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_alignParentBottom="true"-->
-
-<!--        android:scrollIndicators="left"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:menu="@menu/navigationbar" />-->
-
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="595dp"
+        android:layout_width="410dp"
+        android:layout_height="737dp"
         android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="1120dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
-
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -72,10 +41,10 @@
                     android:background="#FFF8E1"
                     app:layout_constraintBottom_toTopOf="@+id/submit_garbage_result"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintHorizontal_bias="0.714"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.428">
+                    app:layout_constraintVertical_bias="0.218">
 
                     <ImageView
                         android:id="@+id/imageView10"
@@ -461,10 +430,10 @@
 
                     <TextView
                         android:id="@+id/garbage6_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="118dp"
+                        android:layout_height="71dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="70dp"
+                        android:layout_marginBottom="50dp"
                         android:text="@string/garbage6"
                         android:textSize="@dimen/name_size1"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -477,22 +446,22 @@
                     android:id="@+id/submit_garbage_result"
                     android:layout_width="218dp"
                     android:layout_height="52dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="28dp"
                     android:text="@string/submit_result"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.549"
+                    app:layout_constraintHorizontal_bias="0.843"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageButton
                     android:id="@+id/take_a_photo"
-                    android:layout_width="78dp"
-                    android:layout_height="69dp"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
                     android:layout_marginStart="280dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="48dp"
                     android:contentDescription="@string/take_photo"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintHorizontal_bias="0.353"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@android:drawable/ic_menu_camera" />
@@ -501,51 +470,61 @@
                     android:id="@+id/ocean_item_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginEnd="220dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
                     android:text="@string/ocean_item_amount_title"
                     android:textSize="@dimen/name_size"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@+id/record_time"
+                    app:layout_constraintEnd_toStartOf="@+id/total_number_item"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/total_number_item"
-                    android:layout_width="129dp"
-                    android:layout_height="22dp"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginEnd="300dp"
+                    android:layout_width="89dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/ocean_total_item_number"
                     android:textSize="@dimen/name_size"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.37"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ocean_item_amount" />
+                    app:layout_constraintBottom_toTopOf="@+id/timerTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/take_a_photo" />
 
                 <TextView
                     android:id="@+id/record_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="300dp"
+                    android:layout_marginEnd="105dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/time"
                     android:textSize="@dimen/name_size"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.483"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/total_number_item" />
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+                    app:layout_constraintEnd_toStartOf="@+id/timerTextView"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/timerTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="270dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/time_vies"
                     android:textSize="@dimen/name_size"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+                    app:layout_constraintEnd_toStartOf="@+id/take_a_photo" />
+
+                <Button
+                    android:id="@+id/clear_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/clear_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/submit_garbage_result"
+                    app:layout_constraintEnd_toStartOf="@+id/submit_garbage_result"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/record_time" />
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

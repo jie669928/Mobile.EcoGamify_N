@@ -45,6 +45,7 @@
         <font color="#00C9B8"><b>Register</b></font>
         to get start with the app.
     </string>
+
     <string name="register_fullname">Your fullname</string>
     <string name="register_email">Your email</string>
     <string name="register_username">Your username</string>
@@ -55,7 +56,7 @@
         <font color="#00C9B8"><b>Login</b></font>
     </string>
     <string name="btn_logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="beach_category">Cleaning Up The Environment</string>
     <string name="plant_native_category">Plant Native Species</string>
@@ -74,12 +75,10 @@
     <string name="plantsroce">../6</string>
     <string name="recyclebadge">Recycle</string>
     <string name="recycle_sroce">../6\n</string>
+
     <string name="event01_description">
         <b>Native species, community engagement: More to planting trees than digging and watering</b>
     </string>
-    <!--    <string name="event01_description_more">-->
-    <!--        Ms Nutan Shah sent soil flying as her cangkul came down in swift, sure strokes on the forest floor. In the hole she dug, she carefully placed a sapling, then re-filled the gaps with earth.The final steps were to water the plant and leave a ring of dried leaves around it to act as fertiliser. It's hard work, but she has already planted about a dozen trees around Singapore and still can't get enough of this.-->
-    <!--    </string>-->
     <string name="event02_description">
         <b>100 Million Tree Planting Campaign: Know the trees, areas before planting FRIM</b>
     </string>
@@ -122,13 +121,14 @@
     <string name="take_photo">Take Photo\n</string>
     <string name="time">Time</string>
     <string name="time_vies">\"00:00:00\"</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="clear_button">Clear</string>
 
     <string name="eventname">Event Name\n</string>
     <string name="total_garbage">Total Garbage</string>
     <string name="timmmme">Time Use\n</string>
     <string name="total_garbage_amount">0</string>
-    <string name="timeeeeeee">\"00:00:00\"\n</string>
+    <string name="timeeeeeee">Time</string>
+
     <string name="event02_description_more">The Malaysian government will plant 100 million trees by 2025 through the environmental programme “Mission GreenPossible.” Launched in October 2022, the initiative aims to address the negative impacts of climate change like intense drought, typhoons, rising sea levels, and insect outbreaks. As of December 2022, the government agency has planted 41 million trees including mangroves, bamboo, mangoes, and different forest trees.</string>
     <string name="event03_description_more">The campaigned was launched with a tree planting gimmick and plaque signing by Deputy Minister of Plantation Industries and Commodities Dato’ Sri Dr Wee Jeck Seng, accompanied by CEO of MRC Nor Hizwan bin Ahmad, and UTAR President Ir Prof Dr Ewe Hong Tat. Also present were MRC Board Members Leong Cheok Keng, Dayang Rusimah @ Raynie Datuk Hj Mohd Din, MRC Senior Director of Sustainability Mohd Fauzi bin Mohd Ghazali, MRC Deputy Director of Sustainability Shahrul Izad bin Yahya, UTAR Council Member Mr Hew Fen Yee, UTAR Vice President for Student Development and Alumni Relations Prof Dr Choong Chee Keong, UTAR Dean of Faculty of Science Assoc Prof Dr Lim Tuck Meng, Founders of SEEDS Malaysia Abdul Razak bin Abdul Aziz and Intan Siti Zarinah Jailani, Operating partner of SEEDS Malaysia Rashdan Rashid, Forest Officer of Central Kinta/Manjung District Forest Office Khairul Nizam bin Mohamed, Han Culture Centre Malaysia (HAN) President Dato\' Goh Hin San, HAN Vice President Datin Lee Ngeok Lan, HAN Managing Director Mini Goh, HAN General Manager Alex Yong, senior management and administrators of MRC and UTAR respectively, and participants.</string>
     <string name="event04_description_more">In Malaysia’s Bornean state of Sabah, a small NGO is replanting forest over land that was once a legally operating oil palm plantation — essentially reversing time for a small swath of land that, when finished, will reconnect two massive protected areas. The Rhino and Forest Fund (RFF) says the burgeoning 800-meter-wide (2,600-foot) wildlife corridor will benefit numerous endangered species, including Bornean elephants, storm storks, and perhaps the world’s largest remaining population of Bornean banteng (Bos javanicus lowi), a type of wild cattle.</string>
@@ -147,5 +147,33 @@
     <string name="button">go to account setting\n</string>
     <string name="done_button">Done\n</string>
     <string name="myownevent">My Own Event</string>
+    //card
+    <string name="card_title1">Power Cycling</string>
+    <string name="card_description1">Riding Green, Planting Roots – Ride sustainably, plant native species, and contribute to a healthier environment.</string>
+    <string name="card_title2">Card Title</string>
+    <string name="card_description2">Card Description</string>
+    <string name="card_title3">Card Title</string>
+    <string name="card_description3">Card Description</string>
+
+
+    <string name="edit_profiles">Edit Profiles\n</string>
+    <string name="enter_password">Password\n</string>
+    <string name="enter_email">Email\n</string>
+    <string name="enter_contact">Contact Number</string>
+    <string name="enter_birth">Day of Birth</string>
+    <string name="btnSave"><![CDATA[Save&Change]]></string>
+    <string name="btndelete">Delete\n</string>
+    <string name="back_profiles">BacktoProfiles\n</string>
+    <string name="btnLogOut">Log Out</string>
+    <string name="goToEdit">Edit Button\n</string>
+
+
+    <string name="clear_messeage">Are you sure you want to clear the \n     garbage count and time?</string>
+    <string name="sure_clear">Sure\n</string>
+    <string name="cancel_clear">Cancel\n</string>
+    <string name="history_hi">Ocean CleanUp History\n</string>
+    <string name="history_remove">Remove\n</string>
+    <string name="historyButton">History\n</string>
+    <string name="backToProfiles">byebye</string>
 
 </resources>
